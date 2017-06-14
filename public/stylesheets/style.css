@@ -1,8 +1,22 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #fffafa
 }
 
 a {
   color: #00B7FF;
+}
+
+.margin-top-m{
+  margin-top:50px;
+}
+
+.bg-black{
+  background-color: black;
+}
+
+.no-row{
+    margin-right: -20px; /* ←マイナス側へ数値を大きくしてみよう */
+    margin-left: -20px;  /* ←マイナス側へ数値を大きくしてみよう */
 }
