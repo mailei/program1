@@ -1,5 +1,5 @@
-
-$("#clickButton").click(function () {
+function onClickButton(){
+//$("#clickButton").click(function () {
     var cityName = $("#citySelector").val();
     var sendRequestBody = {
         'city': cityName
@@ -23,7 +23,8 @@ $("#clickButton").click(function () {
             alert(JSON.stringify(data));
         }
     });
-});
+//});
+}
 
 function putDisplay(rssData) {
     var d = new $.Deferred();
