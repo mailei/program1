@@ -27,10 +27,8 @@ $("#clickButton").click(function () {
 
 function putDisplay(rssData) {
     var d = new $.Deferred();
-    alert("BBB");
     createWeatherList(rssData, d);
     var myPromise = d.promise();
-    alert("AAA");
     myPromise.then(sickAction);
 }
 
@@ -47,6 +45,7 @@ function createWeatherList(rssData, d) {
     d.resolve();
 }
 function sickAction() {
+    document.write("文字列を書き出します。");
     $('#slider').slick({
         autoplay: true,      // 自動で切り替える
         autoplaySpeed: 2000, // 待機する時間
