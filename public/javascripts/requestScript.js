@@ -27,8 +27,10 @@ $("#clickButton").click(function () {
 
 function putDisplay(rssData) {
     var d = new $.Deferred();
+    alert("BBB");
     createWeatherList(rssData, d);
     var myPromise = d.promise();
+    alert("AAA");
     myPromise.then(sickAction);
 }
 
