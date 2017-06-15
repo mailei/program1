@@ -1,5 +1,4 @@
-function onClickButton(){
-//$("#clickButton").click(function () {
+$("#clickButton").click(function () {
     var cityName = $("#citySelector").val();
     var sendRequestBody = {
         'city': cityName
@@ -23,8 +22,8 @@ function onClickButton(){
             alert(JSON.stringify(data));
         }
     });
-//});
-}
+});
+
 
 function putDisplay(rssData) {
     var d = new $.Deferred();
@@ -36,7 +35,8 @@ function putDisplay(rssData) {
 function createWeatherList(rssData, d) {
     $("#slider").remove();
     var weekWeather = [];
-    $("#slickList").append('<ul class="slider" id="slider">');
+    var ulTab=$("<ul>").attr('id','slider');
+    $("#slickList").append(ulTab);
     _.each(rssData, function (value, key, rssData) {
         var appendTag = $("<div class='weatherList'>")
             .append('<font size="50px" color="black">' + value.title + '</font>');
@@ -45,11 +45,10 @@ function createWeatherList(rssData, d) {
     d.resolve();
 }
 function sickAction() {
-    console.log("sassa")
     $('#slider').slick({
-    autoplay: true,      // 自動で切り替える
-    autoplaySpeed: 2000, // 待機する時間
-    arrows: false,       // 次へ・戻るボタンを非表示
-    dots: true           // 点のペジャーナビゲーション
+        autoplay: true,      // 自動で切り替える
+        autoplaySpeed: 2000, // 待機する時間
+        arrows: false,       // 次へ・戻るボタンを非表示
+        dots: true           // 点のペジャーナビゲーション
     });
 }
