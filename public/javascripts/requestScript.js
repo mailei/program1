@@ -38,18 +38,18 @@
             var weekWeather = [];
             var ulTab = $("<ul>").attr('id', 'slider');
             $("#slickList").append(ulTab);
-            // _.each(rssData, function (value, key, rssData) {
-            //     var appendTag = $("<div>")
-            //         .addClass('weatherList')
-            //         .append('<font size="50px" color="black">' + value.title + '</font>');
-            //     $("#slider").append(appendTag);
-            // });
-            for(var cnt=0;cnt<10;cnt++){
-            var appendTag = $("<div>")
-                .addClass('weatherList')
-                .append('<font size="50px" color="black">' + "てすと" + '</font>');
-            $("#slider").append(appendTag);
-            }
+            _.each(rssData, function (value, key, rssData) {
+                var appendTag = $("<div>")
+                    .addClass('weatherList')
+                    .append('<font size="50px" color="black">' + value.title + '</font>');
+                $("#slider").append(appendTag);
+            });
+            // for(var cnt=0;cnt<10;cnt++){
+            // var appendTag = $("<div>")
+            //     .addClass('weatherList')
+            //     .append('<font size="50px" color="black">' + "てすと" + '</font>');
+            // $("#slider").append(appendTag);
+            // }
 
             defer.resolve();
         })();
