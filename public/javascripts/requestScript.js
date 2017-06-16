@@ -44,8 +44,8 @@
             //         .append('<font size="50px" color="black">' + value.title + '</font>');
             //     $("#slider").append(appendTag);
             // });
-            for(var keyNumber=0;keyNumber<Object.keys(rssData).length;keyNumber++){
-                var weather=rssData[keyNumber].title;
+            for (var keyNumber = 0; keyNumber < Object.keys(rssData).length; keyNumber++) {
+                var weather = rssData[keyNumber].title;
                 var appendTag = $("<div>")
                     .addClass('weatherList')
                     .append('<font size="50px" color="black">' + weather + '</font>');
