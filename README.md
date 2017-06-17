@@ -74,10 +74,6 @@ Email: hogehoge@hoge.com
 Password: *************
 Logged in as hogehoge@hoge.com
 
-d:\project\herokuTestProgram>heroku create testprogram
-Creating testprogram... !
- !    Name is already taken
-
 >heroku create program1
 Creating program1... done
 https://program1.herokuapp.com/ | https://git.heroku.com/program1.git
